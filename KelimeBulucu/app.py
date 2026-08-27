@@ -14,6 +14,13 @@ st.title("Kelime Bulucu 🕵️‍♀️")
 harfler = st.text_input("Aranacak harfleri bitişik şekilde girin:")
 
 if harfler:
+    # Dosya yolu düzeltildi
     sonuclar = kelime_bul("KelimeBulucu/temiz_kelimeler.txt", harfler)
+    
+    # Kelimeler en kısadan en uzuna sıralanıyor
+    sonuclar.sort(key=len)
+    
     st.success(f"Tam {len(sonuclar)} adet kelime bulundu!")
-    st.write(sonuclar)
+    
+    # Kutular yerine aralarına virgül koyarak düz metin halinde yazdırıyoruz
+    st.write(", ".join(sonuclar))
