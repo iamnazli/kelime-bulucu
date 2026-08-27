@@ -14,6 +14,6 @@ st.title("Kelime Bulucu 🕵️‍♀️")
 harfler = st.text_input("Aranacak harfleri bitişik şekilde girin:")
 
 if harfler:
-    sonuclar = kelime_bul("KelimeBulucu/temiz_kelimeler.txt", harfler)
+    sonuclar = kelime_bul("karaktersiz_kelimeler.txt", harfler)
     st.success(f"Tam {len(sonuclar)} adet kelime bulundu!")
     st.write(sonuclar)
